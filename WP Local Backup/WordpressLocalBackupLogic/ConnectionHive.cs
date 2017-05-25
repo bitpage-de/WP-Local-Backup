@@ -8,7 +8,7 @@ namespace WordpressLocalBackupLogic
 {
     public class ConnectionHive
     {
-        private 
+        
 
     }
 }

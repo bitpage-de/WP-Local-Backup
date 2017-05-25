@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Renci.SshNet;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,48 @@ namespace WP_Local_Backup
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void buttonCreateBackup_Click(object sender, EventArgs e)
+        {
+            var connectionInfo = new ConnectionInfo("192.168.178.53",
+                                        "christopher",
+                                        new PasswordAuthenticationMethod("christopher", "35g5u98"));
+            using (var client = new SftpClient(connectionInfo))
+            {
+                client.Connect();
+
+                string test = "stop here";
+            }
+        }
+
+        private void buttonTestConnection_Click(object sender, EventArgs e)
+        {
+            var connectionInfo = new ConnectionInfo(this.textBoxRemoteAdress.Text,
+                                                    this.textBoxUsername.Text,
+                                                    new PasswordAuthenticationMethod(this.textBoxUsername.Text,
+                                                                                     this.maskedTextBoxPassword.Text));
+            using (var client = new SftpClient(connectionInfo))
+            {
+                try
+                {
+                    client.Connect();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Connection could not be established.");
+                    return;
+                }
+
+                if(client.IsConnected)
+                {
+                    MessageBox.Show("Connection successfully established.");
+                }
+                else
+                {
+                    MessageBox.Show("Connection could not be established.");
+                }
+            }
         }
     }
 }
