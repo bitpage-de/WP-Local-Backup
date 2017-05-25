@@ -47,10 +47,11 @@
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.buttonCreateBackup);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(473, 235);
+            this.groupBox1.Size = new System.Drawing.Size(473, 450);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Connection Configuration";
@@ -82,7 +83,7 @@
             // 
             // buttonCreateBackup
             // 
-            this.buttonCreateBackup.Location = new System.Drawing.Point(51, 319);
+            this.buttonCreateBackup.Location = new System.Drawing.Point(39, 389);
             this.buttonCreateBackup.Name = "buttonCreateBackup";
             this.buttonCreateBackup.Size = new System.Drawing.Size(104, 23);
             this.buttonCreateBackup.TabIndex = 1;
@@ -143,8 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(497, 389);
-            this.Controls.Add(this.buttonCreateBackup);
+            this.ClientSize = new System.Drawing.Size(497, 531);
             this.Controls.Add(this.groupBox1);
             this.Name = "MainForm";
             this.Text = "WP Local Backup";
