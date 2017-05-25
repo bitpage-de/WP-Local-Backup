@@ -38,6 +38,8 @@
             this.maskedTextBoxPassword = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonTestConnection = new System.Windows.Forms.Button();
+            this.labelPathWordpressRoot = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -83,7 +85,7 @@
             // 
             // buttonCreateBackup
             // 
-            this.buttonCreateBackup.Location = new System.Drawing.Point(39, 389);
+            this.buttonCreateBackup.Location = new System.Drawing.Point(39, 421);
             this.buttonCreateBackup.Name = "buttonCreateBackup";
             this.buttonCreateBackup.Size = new System.Drawing.Size(104, 23);
             this.buttonCreateBackup.TabIndex = 1;
@@ -111,11 +113,14 @@
             // 
             this.maskedTextBoxPassword.Location = new System.Drawing.Point(167, 84);
             this.maskedTextBoxPassword.Name = "maskedTextBoxPassword";
+            this.maskedTextBoxPassword.PasswordChar = '*';
             this.maskedTextBoxPassword.Size = new System.Drawing.Size(171, 20);
             this.maskedTextBoxPassword.TabIndex = 5;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.labelPathWordpressRoot);
             this.groupBox2.Controls.Add(this.buttonTestConnection);
             this.groupBox2.Controls.Add(this.labelRemoteAdress);
             this.groupBox2.Controls.Add(this.maskedTextBoxPassword);
@@ -125,20 +130,36 @@
             this.groupBox2.Controls.Add(this.textBoxUsername);
             this.groupBox2.Location = new System.Drawing.Point(18, 36);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(358, 156);
+            this.groupBox2.Size = new System.Drawing.Size(358, 199);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Wordpress Files";
             // 
             // buttonTestConnection
             // 
-            this.buttonTestConnection.Location = new System.Drawing.Point(21, 119);
+            this.buttonTestConnection.Location = new System.Drawing.Point(234, 117);
             this.buttonTestConnection.Name = "buttonTestConnection";
             this.buttonTestConnection.Size = new System.Drawing.Size(104, 23);
             this.buttonTestConnection.TabIndex = 6;
             this.buttonTestConnection.Text = "Test Connection";
             this.buttonTestConnection.UseVisualStyleBackColor = true;
             this.buttonTestConnection.Click += new System.EventHandler(this.buttonTestConnection_Click);
+            // 
+            // labelPathWordpressRoot
+            // 
+            this.labelPathWordpressRoot.AutoSize = true;
+            this.labelPathWordpressRoot.Location = new System.Drawing.Point(18, 154);
+            this.labelPathWordpressRoot.Name = "labelPathWordpressRoot";
+            this.labelPathWordpressRoot.Size = new System.Drawing.Size(95, 13);
+            this.labelPathWordpressRoot.TabIndex = 7;
+            this.labelPathWordpressRoot.Text = "Path to Wordpress";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(167, 151);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(171, 20);
+            this.textBox1.TabIndex = 8;
             // 
             // MainForm
             // 
@@ -167,6 +188,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonTestConnection;
         private System.Windows.Forms.MaskedTextBox maskedTextBoxPassword;
+        private System.Windows.Forms.Label labelPathWordpressRoot;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

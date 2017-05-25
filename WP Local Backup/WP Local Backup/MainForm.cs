@@ -1,4 +1,5 @@
 ﻿using Renci.SshNet;
+using Renci.SshNet.Sftp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,11 +32,16 @@ namespace WP_Local_Backup
                     client.Connect();
                     if(client.IsConnected)
                     {
+                        // Get Directories
+                        // Remember: Everything in UNIX-type OS is a file, even directories
+                        List<SftpFile> files = client.ListDirectory("/").ToList<SftpFile>();
+                        //client.DownloadFile();
 
                     }
                     else
                     {
                         // TODO: handle failure 
+                        
                     }
 
 
